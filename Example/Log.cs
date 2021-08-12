@@ -14,10 +14,11 @@ public class Log : ActionNode {
 
     public override void Initialize(NodeData data) {
         base.Initialize(data);
-        text = data.Get<string>(key);
     }
 
     protected override BehaviorState ExecuteAction() {
+        text = data.Get<string>(key);
+        Debug.Log(text);
         return BehaviorState.Success;
     }
 }
